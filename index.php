@@ -1,13 +1,19 @@
 <?php
+  /* set the api key here *********************************/
+
+  define('JSON_API_KEY','i394jf');
+
+  /* do not edit ******************************************/
+
   include "../global.php";
-  
+
 //  api/?json=recent&count=10&apikey=3949
 //  api/?json=featured&count=10&apikey=3949
 //  api/?json=categorylist&parent_id=29&count=10&apikey=3949
 //  api/?json=listing&category=29&includechild=1&count=10&apikey=3949
 //  api/?json=search&kw=gundam&count=10&apikey=3949
   
-  if ($lep->input['apikey']!='i394jf' && $lep->input['apikey']!='') {
+  if ($lep->input['apikey']!=JSON_API_KEY && $lep->input['apikey']!='') {
     print("invalid key");
     exit;
   }
